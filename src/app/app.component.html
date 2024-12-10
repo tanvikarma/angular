@@ -1,0 +1,21 @@
+<h4>app component</h4>
+<button (click)="toggle()">Show/Hide</button>
+<div *ngIf= 'isshow' >
+   <app-parent></app-parent>
+</div>
+
+<div *ngIf= 'isVisible' >
+  <app-first></app-first>
+</div>
+
+
+<button (click)="toggle1()">Display</button>
+<div *ngIf= 'isFile' >
+  <app-file-one></app-file-one>
+</div>
+
+<button (click)="open()">open</button>
+<div *ngIf="isopen">
+  <app-host></app-host>
+  <app-binding></app-binding>
+</div>

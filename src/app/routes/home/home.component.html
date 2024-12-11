@@ -1,0 +1,15 @@
+<div>
+    <a routerLink="/" routerLinkActive="active" > Home</a>
+    <br>
+    <a routerLink="/users">Users</a>
+    <br>
+    <a routerLink="/help">Help</a>
+</div>
+
+<router-outlet></router-outlet>
+
+<ul>
+    <li (click)="onSelect(department)" *ngFor="let department of departments">
+        <span> {{department.id}} </span> {{department.name}}
+    </li>
+</ul>

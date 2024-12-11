@@ -5,7 +5,7 @@ import { MailService } from 'src/app/mail.service';
   selector: 'app-binding',
   templateUrl: './binding.component.html',
   styleUrls: ['./binding.component.scss'],
-  // providers: [MailService]
+  providers: [MailService]
 })
 export class BindingComponent {
   constructor(private mail: MailService) {}

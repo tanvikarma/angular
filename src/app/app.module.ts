@@ -13,6 +13,13 @@ import { DirectiveNameDirective } from './directive-name.directive';
 import { HostComponent } from './component/host/host.component';
 import { BindingComponent } from './component/binding/binding.component';
 import { HighlightDirective } from './highlight.directive';
+import { HomeComponent } from './routes/home/home.component';
+import { HelpComponent } from './routes/help/help.component';
+import { UsersComponent } from './routes/users/users.component';
+import { PageNotFoundComponent } from './routes/page-not-found/page-not-found.component';
+import { ContactUsComponent } from './routes/contact-us/contact-us.component';
+import { FormExampleComponent } from './forms/form-example/form-example.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,11 +33,18 @@ import { HighlightDirective } from './highlight.directive';
     DirectiveNameDirective,
     HostComponent,
     BindingComponent,
-    HighlightDirective
+    HighlightDirective,
+    HomeComponent,
+    HelpComponent,
+    UsersComponent,
+    PageNotFoundComponent,
+    ContactUsComponent,
+    FormExampleComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

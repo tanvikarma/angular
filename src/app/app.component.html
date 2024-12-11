@@ -1,3 +1,4 @@
+<app-home></app-home>
 <h4>app component</h4>
 <button (click)="toggle()">Show/Hide</button>
 <div *ngIf= 'isshow' >
@@ -18,4 +19,7 @@
 <div *ngIf="isopen">
   <app-host></app-host>
   <app-binding></app-binding>
+  <app-form-example></app-form-example>
 </div>
+
+<router-outlet></router-outlet>

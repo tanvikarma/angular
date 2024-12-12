@@ -19,7 +19,10 @@ import { UsersComponent } from './routes/users/users.component';
 import { PageNotFoundComponent } from './routes/page-not-found/page-not-found.component';
 import { ContactUsComponent } from './routes/contact-us/contact-us.component';
 import { FormExampleComponent } from './forms/form-example/form-example.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TemplateFormComponent } from './template/template-form/template-form.component';
+import { ReactiveFormComponent } from './template/reactive-form/reactive-form.component';
+import { ObservableEgComponent } from './Observable/observable-eg/observable-eg.component';
 
 @NgModule({
   declarations: [
@@ -39,12 +42,16 @@ import { FormsModule } from '@angular/forms';
     UsersComponent,
     PageNotFoundComponent,
     ContactUsComponent,
-    FormExampleComponent
+    FormExampleComponent,
+    TemplateFormComponent,
+    ReactiveFormComponent,
+    ObservableEgComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

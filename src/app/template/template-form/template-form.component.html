@@ -1,0 +1,45 @@
+<h4>Form</h4>
+<form (ngSubmit)="onFormSubmit()" action="" #formexample="ngForm">
+
+		<button (click)="fillValues()">Fill Data</button><br><br>
+
+		<span *ngIf="!userdata.valid && userdata.touched">User Data is invaild</span>
+		<div ngModelGroup="userFormData" #userdata="ngModelGroup">
+				<label for="name">name</label>
+		<br>
+		<input type="text" id="name" name="name" [(ngModel)]='about' required>
+		<br><br>
+		<!-- <h2> {{about}} </h2> -->
+
+		<label for="email">EMail</label>
+		<br>
+		<input type="email" #email="ngModel" id="email" name="email" ngModel required><br>
+		<span *ngIf="email.touched && !email.valid">
+				valid email is required
+			</span><br>
+		<br>
+		</div>
+
+		<label for="number">Number</label>
+		<br>
+		<input type="number" id="number" name="number" ngModel>
+		<br><br>
+		<label for="gender">Gender</label>
+		<br>
+		<select name="gender" id="gender" [ngModel]="gender">
+				<option value="male">Male</option>
+				<option value="female">Female</option>
+		</select>
+		<br>
+		<br>
+		<button type="submit" [disabled]="!formexample.valid">Submit</button>
+</form>
+
+<div>
+		<h3>Your Data</h3>
+		<p>user: {{user.name}} </p>
+		<p>eamil: {{user.email}} </p>
+		<p>number: {{user.phone}} </p>
+		<p>gender: {{user.gender}} </p>
+</div>
+
